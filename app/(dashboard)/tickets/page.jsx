@@ -1,8 +1,12 @@
 import { Suspense } from "react";
 import React from "react";
 import TicketList from "./TicketList";
-import Loading from "../(dashboard)/loading";
+import Loading from "../loading";
 import Link from "next/link";
+
+export const metadata = {
+  title: "Qwarts Helpdesk | Tickets",
+};
 
 export default function Tickets() {
   return (

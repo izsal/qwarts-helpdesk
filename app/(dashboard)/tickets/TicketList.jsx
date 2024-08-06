@@ -1,5 +1,4 @@
 import Link from "next/link";
-import React from "react";
 
 async function getTickets() {
   const res = await fetch("http://localhost:4000/tickets", {
@@ -13,6 +12,7 @@ async function getTickets() {
 
 export default async function TicketList() {
   const tickets = await getTickets();
+
   return (
     <>
       {tickets.map((ticket) => (
@@ -27,7 +27,7 @@ export default async function TicketList() {
         </div>
       ))}
       {tickets.length === 0 && (
-        <p className="text-center">There no open Tickets, yay?</p>
+        <p className="text-center">There are no open tickets, yay!</p>
       )}
     </>
   );

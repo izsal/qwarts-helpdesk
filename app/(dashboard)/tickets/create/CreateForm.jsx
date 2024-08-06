@@ -8,7 +8,7 @@ export default function CreateForm() {
 
   const [title, setTitle] = useState("");
   const [body, setBody] = useState("");
-  const [priority, setPriority] = useState("");
+  const [priority, setPriority] = useState("low");
   const [isLoading, setIsLoading] = useState(false);
 
   const handleSubmit = async (e) => {
@@ -24,13 +24,11 @@ export default function CreateForm() {
 
     const res = await fetch("http://localhost:4000/tickets", {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json",
-      },
+      headers: { "Content-Type": "application/json" },
       body: JSON.stringify(newTicket),
     });
 
-    if (res.status == 201) {
+    if (res.status === 201) {
       router.refresh();
       router.push("/tickets");
     }
@@ -63,11 +61,7 @@ export default function CreateForm() {
           <option value="high">High Priority</option>
         </select>
       </label>
-      <button
-        className="btn-primary"
-        onClick={handleSubmit}
-        disabled={isLoading}
-      >
+      <button className="btn-primary" disabled={isLoading}>
         {isLoading && <span>Adding...</span>}
         {!isLoading && <span>Add Ticket</span>}
       </button>

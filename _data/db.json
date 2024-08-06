@@ -22,10 +22,17 @@
       "user_email": "peach@netninja.dev"
     },
     {
-      "id": "8186",
-      "title": "new ticket",
-      "body": "This is new ticket ",
-      "priority": "",
+      "id": "9113",
+      "title": "new",
+      "body": "new",
+      "priority": "low",
+      "user_email": "mario@netninja.dev"
+    },
+    {
+      "id": "6ab7",
+      "title": "Terbaru",
+      "body": "terbaru",
+      "priority": "medium",
       "user_email": "iqurlinas@gmail.com"
     }
   ]
