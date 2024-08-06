@@ -1,5 +1,6 @@
 "use client";
 
+//component
 import AuthForm from "../AuthForm";
 
 export default function Login() {
