@@ -2,6 +2,7 @@ import Image from "next/image";
 import Link from "next/link";
 import React from "react";
 import Logo from "./1.png";
+import LogoutButton from "./LogoutButton";
 
 export default function Navbar({ user }) {
   return (
@@ -20,6 +21,7 @@ export default function Navbar({ user }) {
         Tickets
       </Link>
       {user && <span>Hello, {user.email}</span>}
+      <LogoutButton />
     </nav>
   );
 }
